@@ -7,12 +7,16 @@ export function afficher() {
   const btnLeft = document.getElementById("preBtn");
   const btnRight = document.getElementById("svtBtn");
   const numbrePage = document.getElementById("curPage");
+  const select = document.getElementById("categorieFilter");
+  const rechercher = document.getElementById("searchBarre");
+
 
   function rendre() {
-    productsEL.innerText = "";
+    productsEL.innerHTML = "";
     let start = (cuurentPage - 1) * iteamsPerPage;
-    // let filterProduct = filterProduct(data, select.value);
-    let divPage = data.slice(start, start + iteamsPerPage);
+    let filterProduct = filterByCategory(data, select.value);
+        filterProduct = filterByName(filterProduct, rechercher.value);
+    let divPage = filterProduct.slice(start, start + iteamsPerPage);
 
     divPage.map((element) => {
       let card = document.createElement("div");
@@ -31,9 +35,9 @@ export function afficher() {
       );
       productsEL.append(card);
     });
-    // let totalPage = Math.ceil(filterProduct.length / iteamsPerPage);
+    let totalPage = Math.ceil(filterProduct.length / iteamsPerPage);
     btnLeft.disabled = cuurentPage === 1;
-    btnRight.disabled = cuurentPage === Math.ceil(data.length / iteamsPerPage);
+    btnRight.disabled = cuurentPage >= totalPage;
     numbrePage.textContent = cuurentPage;
   }
   btnLeft.addEventListener("click", () => {
@@ -42,19 +46,36 @@ export function afficher() {
       rendre();
     }
   });
-  
+
   btnRight.addEventListener("click", () => {
     if (cuurentPage < Math.ceil(data.length / iteamsPerPage)) {
       cuurentPage++;
       rendre();
     }
   });
+  select.addEventListener("change", () => {
+    cuurentPage = 1;
+    rendre();
+  });
+  rechercher.addEventListener("input", () => {
+    cuurentPage = 1;
+    rendre();
+  });
   rendre();
 }
 getProducts();
 
-// function filterProduct(productsEL, categories) {
-//   return productsEL.filter((data) => {
-//     return categories === "all" || data.category === categories;
-//   });
-// }
+function filterByCategory(productsEL, categories) {
+  return productsEL.filter((data) => {
+    return categories === "all" || data.category === categories;
+  });
+}
+
+function filterByName(products, search) {
+    console.log("Products:", products);
+  console.log("Search:", search);
+  return products.filter((datas) => {
+    return datas.title.toLowerCase().includes(search.toLowerCase());
+  });
+}
+
