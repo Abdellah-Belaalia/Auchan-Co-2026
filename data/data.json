@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "title": "Lait Jaouda 1L",
+    "category": "Produits laitiers",
+    "promotion": true,
+    "price": 8.5,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 2,
+    "title": "Huile de table Lesieur 1L",
+    "category": "Huiles",
+    "promotion": false,
+    "price": 17.9,
+    "image": "../assets/images/Huile-Lesieur1L.png"
+  },
+  {
+    "id": 3,
+    "title": "Sucre Cosumar 1kg",
+    "category": "Épicerie",
+    "promotion": true,
+    "price": 7.5,
+    "image": "/assets/images/Sucre-Cosumar1kg.png"
+  },
+  {
+    "id": 4,
+    "title": "Farine Fleur Alitkane 5kg",
+    "category": "Épicerie",
+    "promotion": false,
+    "price": 28.0,
+    "image": "../assets/images/Farine-Alitkane5kg.png"
+  },
+  {
+    "id": 5,
+    "title": "Thé Sultan 200g",
+    "category": "Boissons",
+    "promotion": true,
+    "price": 22.9,
+    "image": "../assets/images/Thé-Sultan200g.png"
+  },
+  {
+    "id": 6,
+    "title": "Café Nescafé 100g",
+    "category": "Boissons",
+    "promotion": false,
+    "price": 35.0,
+    "image": "../assets/images/Café-Nescafé100g.png"
+  },
+  {
+    "id": 7,
+    "title": "Couscous Dari 1kg",
+    "category": "Pâtes et céréales",
+    "promotion": true,
+    "price": 14.5,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 8,
+    "title": "Riz long grain 1kg",
+    "category": "Pâtes et céréales",
+    "promotion": false,
+    "price": 13.0,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 9,
+    "title": "Lentilles 1kg",
+    "category": "Légumineuses",
+    "promotion": false,
+    "price": 18.0,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 10,
+    "title": "Pois chiches 1kg",
+    "category": "Légumineuses",
+    "promotion": true,
+    "price": 16.5,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 11,
+    "title": "Yaourts Jaouda (4 unités)",
+    "category": "Produits laitiers",
+    "promotion": false,
+    "price": 9.0,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 12,
+    "title": "Fromage La Vache qui rit",
+    "category": "Produits laitiers",
+    "promotion": true,
+    "price": 19.9,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 13,
+    "title": "Eau minérale Sidi Ali 1,5L",
+    "category": "Boissons",
+    "promotion": false,
+    "price": 6.0,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 14,
+    "title": "Jus d'orange Marrakech 1L",
+    "category": "Boissons",
+    "promotion": true,
+    "price": 12.5,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 15,
+    "title": "Tomates fraîches 1kg",
+    "category": "Fruits et légumes",
+    "promotion": false,
+    "price": 7.0,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 16,
+    "title": "Pommes Golden 1kg",
+    "category": "Fruits et légumes",
+    "promotion": true,
+    "price": 13.9,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 17,
+    "title": "Bananes 1kg",
+    "category": "Fruits et légumes",
+    "promotion": false,
+    "price": 12.0,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 18,
+    "title": "Dattes Majhoul 500g",
+    "category": "Fruits secs",
+    "promotion": true,
+    "price": 45.0,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 19,
+    "title": "Olives vertes 500g",
+    "category": "Conserves",
+    "promotion": false,
+    "price": 18.9,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 20,
+    "title": "Concentré de tomates 400g",
+    "category": "Conserves",
+    "promotion": true,
+    "price": 8.0,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 21,
+    "title": "Détergent Aïcha 1L",
+    "category": "Produits d'entretien",
+    "promotion": false,
+    "price": 15.9,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  },
+  {
+    "id": 22,
+    "title": "Savon El Kef (4 unités)",
+    "category": "Hygiène et beauté",
+    "promotion": true,
+    "price": 12.0,
+    "image": "../assets/images/Lait_Jaouda1L.png"
+  }
+]
