@@ -13,13 +13,14 @@ export function afficher() {
 
   function rendre() {
     productsEL.innerHTML = "";
-    let start = (cuurentPage - 1) * iteamsPerPage;
     let filterProduct = filterByCategory(data, select.value);
         filterProduct = filterByName(filterProduct, rechercher.value);
+    let start = (cuurentPage - 1) * iteamsPerPage;
     let divPage = filterProduct.slice(start, start + iteamsPerPage);
 
     divPage.map((element) => {
       let card = document.createElement("div");
+      card.dataset.productId = element.id;
       card.innerHTML = `
       <img class = "w-full h-32 object-contain" src="${element.image}">
       <h3  class="pl-2 font-bold">${element.title}</h3>
@@ -27,6 +28,7 @@ export function afficher() {
       <p  class="pl-2 font-bold">${element.price}</p>
       `;
       card.classList.add(
+        "product-card",
         "p-4",
         "rounded-lg",
         "shadow",
