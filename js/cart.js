@@ -13,7 +13,7 @@ export function showPanier() {
             <h1 class="p-4">Panier</h1>
             <button id="btn-fermer" type="button" class="p-4">x</button>
           </div>
-          <div></div>
+          <div id="drop" class="m-2"></div>
           <div class="p-4">
           <h4>Total : <span>0</span><span>DH</span></h4>
           </div>
