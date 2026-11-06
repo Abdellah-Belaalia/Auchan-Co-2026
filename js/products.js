@@ -1,4 +1,5 @@
 import { getProducts } from "./api.js";
+import { ajouterBtn } from "./dragDrop.js";
 export let data = JSON.parse(localStorage.getItem("dataStock")) || [];
 let cuurentPage = 1;
 const iteamsPerPage = 8;
@@ -46,6 +47,13 @@ export function afficher() {
       
 
       productsEL.append(card);
+
+      const btnAjout = card.querySelector(".btn-ajout");
+      btnAjout.addEventListener("click", () => {
+        const produitId = card.dataset.productId
+        ajouterBtn(produitId)
+      })
+
     });
     let totalPage = Math.ceil(filterProduct.length / iteamsPerPage);
     btnLeft.disabled = cuurentPage === 1;

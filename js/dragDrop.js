@@ -5,21 +5,7 @@ const productEL = document.getElementById('products')
 // const btnPlus = document.querySelectorAll('.btn-plus');
 // const btnMoins = document.querySelectorAll('.btn-moins');
 // const quantite = document.querySelectorAll('.quantite');
-export function dragDrop() {
-    productEL.addEventListener('dragstart', (e) => {
-        const produitCarte = e.target.closest(".product-card");
-        if (!produitCarte) return;
-        const produitId = produitCarte.dataset.productId;
-        e.dataTransfer.setData("text/plain", produitId);
-        console.log(produitId)
-    })
-};
-panier1.addEventListener("dragover", (e) => {
-    e.preventDefault()
-});
-panier1.addEventListener("drop", (e) => {
-    e.preventDefault();
-    const produitId = e.dataTransfer.getData("text/plain")
+export function ajouterBtn (produitId){
     const produit = data.find(element => element.id == produitId)
     if (!produit) return;
     const dropZone = document.querySelector('#drop');
@@ -72,7 +58,7 @@ panier1.addEventListener("drop", (e) => {
     unProduit.addEventListener('click', (e) => {
         const btnPlus = e.target.closest(".btn-plus");
         const btnMoins = e.target.closest(".btn-moins");
-        if (btnMoins && btnPlus) return;
+        if (!btnMoins && !btnPlus) return;
         const quantite = unProduit.querySelector(".quantite");
         const prix = unProduit.querySelector(".prix")
         let nombre = Number(quantite.textContent);
@@ -92,13 +78,29 @@ panier1.addEventListener("drop", (e) => {
         totalCalcul();
     });
 
+};
+
+export function dragDrop() {
+    productEL.addEventListener('dragstart', (e) => {
+        const produitCarte = e.target.closest(".product-card");
+        if (!produitCarte) return;
+        const produitId = produitCarte.dataset.productId;
+        e.dataTransfer.setData("text/plain", produitId);
+    })
+};
+panier1.addEventListener("dragover", (e) => {
+    e.preventDefault()
+});
+panier1.addEventListener("drop", (e) => {
+    e.preventDefault();
+    const produitId = e.dataTransfer.getData("text/plain")
+    ajouterBtn(produitId);
 });
 function totalCalcul (){
     const prixTotal = document.querySelectorAll(".prix");
     let total = 0;
     prixTotal.forEach(prix => {
         total += parseFloat(prix.textContent)
-        console.log(total)
     });
     document.querySelector("#total").textContent = total.toFixed(2);
 }

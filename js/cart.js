@@ -21,7 +21,6 @@ export function showPanier() {
 
     const btnFermer = popUp.querySelector('#btn-fermer')
     btnFermer.addEventListener('click', () => {
-      console.log("button cliqué")
       popUp.close()
     })
     main.appendChild(popUp);
