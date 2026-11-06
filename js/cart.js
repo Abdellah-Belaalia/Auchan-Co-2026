@@ -13,14 +13,14 @@ export function showPanier() {
             <h1 class="p-4">Panier</h1>
             <button id="btn-fermer" type="button" class="p-4">x</button>
           </div>
-          <div id="drop" class="m-2"></div>
+          <div id="drop" class="flex flex-col gap-2 m-2"></div>
           <div class="p-4">
-          <h4>Total : <span>0</span><span>DH</span></h4>
+          <h4>Total : <span id="total">0</span>DH</h4>
           </div>
     `
 
     const btnFermer = popUp.querySelector('#btn-fermer')
-    btnFermer.addEventListener('click', ()=>{
+    btnFermer.addEventListener('click', () => {
       console.log("button cliqué")
       popUp.close()
     })

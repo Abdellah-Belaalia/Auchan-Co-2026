@@ -28,7 +28,7 @@ export function afficher() {
         <p class="pl-2 font-bold">${element.category}</p>
         <p class="pl-2 font-bold">${element.price}</p>
       </div>
-      <button type="button" class="btn-ajout bg-red-400 font-bold border rounded-lg m-4 text-white w-20">Ajouter</button>
+      <button type="button" class="btn-ajout bg-red-400 h-10 font-bold border rounded-lg m-4 text-white w-20">Ajouter</button>
       </div>
       `;
       card.classList.add(
@@ -43,6 +43,7 @@ export function afficher() {
       card.dataset.image = element.image
       card.dataset.title = element.title 
       card.dataset.price = element.price
+      
 
       productsEL.append(card);
     });
@@ -83,8 +84,8 @@ function filterByCategory(productsEL, categories) {
 }
 
 function filterByName(products, search) {
-  console.log("Products:", products);
-  console.log("Search:", search);
+  // console.log("Products:", products);
+  // console.log("Search:", search);
   return products.filter((datas) => {
     return datas.title.toLowerCase().includes(search.toLowerCase());
   });
