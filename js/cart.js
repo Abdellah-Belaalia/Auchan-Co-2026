@@ -14,7 +14,7 @@ export function showPanier() {
             <button id="btn-fermer" type="button" class="p-4">x</button>
           </div>
           <div id="drop" class="flex flex-col gap-2 m-2"></div>
-          <div class="p-4">
+          <div class="p-4"> 
           <h4>Total : <span id="total">0</span>DH</h4>
           </div>
     `

@@ -41,6 +41,7 @@ export function ajouterBtn (produitId){
                     <p class="prix pl-2 font-extralight text-lg">${produit.price}DH</p>
                 </div>
                 <div class="flex items-center justify-between gap-3">
+                    <button type="button" class="btn-delete w-10 h-10 rounded-lg bg-red-600 text-white hover:bg-red-300">X</button>    
                     <button type="button" class="btn-moins w-10 h-10 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 font-bold text-xl">
                          -
                     </button>
@@ -48,6 +49,7 @@ export function ajouterBtn (produitId){
                     <button type="button" class="btn-plus w-10 h-10 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 font-bold text-xl">
                          +
                     </button>
+                     
                 </div>
             </div>
         </div>
@@ -56,8 +58,16 @@ export function ajouterBtn (produitId){
     totalCalcul();
 
     unProduit.addEventListener('click', (e) => {
+        const btnDelete = e.target.closest(".btn-delete");
         const btnPlus = e.target.closest(".btn-plus");
         const btnMoins = e.target.closest(".btn-moins");
+
+        if(btnDelete){
+            unProduit.remove(),
+            totalCalcul()
+            return;
+        }
+
         if (!btnMoins && !btnPlus) return;
         const quantite = unProduit.querySelector(".quantite");
         const prix = unProduit.querySelector(".prix")
