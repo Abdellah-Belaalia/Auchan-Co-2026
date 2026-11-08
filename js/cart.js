@@ -1,7 +1,12 @@
-const panier1 = document.getElementById("panier");
-const main = document.getElementById("main");
+
 const popUp = document.createElement("dialog");
 export function showPanier() {
+  const panier1 = document.getElementById("panier");
+  const main = document.getElementById("main");
+
+    if(!main || !panier1) return;
+
+
   panier1.addEventListener("click", () => {
     popUp.showModal();
   });

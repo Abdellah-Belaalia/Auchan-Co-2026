@@ -11,6 +11,8 @@ export function afficher() {
   const select = document.getElementById("categorieFilter");
   const rechercher = document.getElementById("searchBarre");
 
+  if(!rechercher || !select || !numbrePage || !btnRight || !btnLeft || !productsEL) return;
+
   function rendre() {
     productsEL.innerHTML = "";
     let filterProduct = filterByCategory(data, select.value);
