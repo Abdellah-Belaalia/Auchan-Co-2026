@@ -11,7 +11,7 @@ export function afficher() {
   const select = document.getElementById("categorieFilter");
   const rechercher = document.getElementById("searchBarre");
 
-  if(!rechercher || !select || !numbrePage || !btnRight || !btnLeft || !productsEL) return;
+  if (!rechercher || !select || !numbrePage || !btnRight || !btnLeft || !productsEL) return;
 
   function rendre() {
     productsEL.innerHTML = "";
@@ -44,9 +44,9 @@ export function afficher() {
       );
       card.draggable = true;
       card.dataset.image = element.image
-      card.dataset.title = element.title 
+      card.dataset.title = element.title
       card.dataset.price = element.price
-      
+
 
       productsEL.append(card);
 
@@ -99,4 +99,35 @@ function filterByName(products, search) {
   return products.filter((datas) => {
     return datas.title.toLowerCase().includes(search.toLowerCase());
   });
+}
+
+export function ajouterProduct() {
+  const form = document.getElementById("produit-form")
+  const titre = document.getElementById("titre")
+  const categorie = document.getElementById("categories")
+  const prix = document.getElementById("price")
+
+  let produits = JSON.parse(localStorage.getItem("dataStock")) || []
+
+  let nextId = 0
+  produits.forEach(p => {
+    if(Number(p.id) > nextId){
+      nextId = Number(p.id)
+    }
+  });
+
+  const produitNovu = {
+    id: nextId + 1,
+    title: titre.value.trim(),
+    category: categorie.value.trim(),
+    promotion: true,
+    price: Number(prix.value),
+    image: "../assets/images/Lait_Jaouda1L.png"
+  };
+
+  produits.push(produitNovu);
+  localStorage.setItem("dataStock", JSON.stringify(produits))
+
+  form.reset()
+
 }

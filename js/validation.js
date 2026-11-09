@@ -1,3 +1,4 @@
+import { ajouterProduct } from "./products.js";
 const regexTitre = /^[A-Z a-z À-ÿ 0-9 '.,()-]{3,30}$/;
 const regexCategories = /^[A-Z a-z À-ÿ 0-9 '.,()-]{3,30}$/;
 const regexPrix = /^\d{1,4}(\.\d{1,2})?$/;
@@ -51,7 +52,7 @@ export function produitValid() {
         }
 
         if (valide) {
-            console.log("Produit validé")
+            ajouterProduct();
         }
     })
 };
