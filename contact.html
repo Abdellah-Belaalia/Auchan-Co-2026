@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Administrateur</title>
+    <title>Contactez-nous</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="min-h-screen bg-gray-50 text-gray-600">
@@ -56,7 +56,7 @@
     <main class="px-4 py-8 md:px-8 md:py-12">
       <section class="max-w-xl mx-auto">
         <h2 class="text-xl md:text-2xl font-bold m-6 text-center">Nous sommes heureux de recevoir votre Message</h2>
-        <form class="bg-white border rounded-xl p-5 md:p-8 flex flex-col gap-5">
+        <form id="formMsg" novalidate class="bg-white border rounded-xl p-5 md:p-8 flex flex-col gap-5">
           <div class="flex flex-col gap-2">
             <label for="Nom" class="font-bold">Nom</label>
             <input
@@ -81,7 +81,7 @@
             <label for="phone" class="font-bold">Téléphone</label>
             <input
               type="text"
-              id="price"
+              id="phone"
               placeholder="06-XX-XX-XX-XX"
               class="w-full border rounded-lg p-3"
             />
@@ -108,6 +108,7 @@
             />
             <p id="erreurMsg" class="text-red-500"></p>
           </div>
+          <button type="submit" class="bg-red-400 text-white font-bold rounded-lg h-12 hover:bg-red-300">Envoyer</button>
         </form>
       </section>
     </main>
